@@ -23,6 +23,8 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
     - **initFrame:int = 1** is an optional parameter corresponding to the initial keyframe of the object.
     - **endFrame:int = 2** is an optional parameter that controls the frame which is set when the object is fixed to the active zone.
     - **mouseOut:Boolean = false** If this parameter is set true, when the mouse goes out of the targetObject, this one returns to startPosition.
+
+    
   
 
 * Class events

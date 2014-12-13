@@ -63,20 +63,20 @@ package  {
 	*/
 								
 		public function StandardMovements(targetObject:MovieClip,activeZone:MovieClip,initFrame:int=1,endFrame:int=2,mouseOut:Boolean=false) {
-		    this.targetObject=targetObject;
-			this.startPositionObjectX=targetObject.x;
-			this.startPositionObjectY=targetObject.y;
-			this.activeZone=activeZone;
+		    this.targetObject = targetObject;
+			this.startPositionObjectX = targetObject.x;
+			this.startPositionObjectY = targetObject.y;
+			this.activeZone = activeZone;
 			this.targetObject.addEventListener(MouseEvent.MOUSE_DOWN,onDownTarjectObject);
-			this.activeZone.alpha=0;
-			this.initFrame=initFrame;
-			this.endFrame=endFrame;
-			this.stateObject=false;
-			this.mouseOut=mouseOut;
-			this.flag=false;
+			this.activeZone.alpha = 0;
+			this.initFrame = initFrame;
+			this.endFrame = endFrame;
+			this.stateObject = false;
+			this.mouseOut = mouseOut;
+			this.flag = false;
 			this.targetObject.stop();
-			this.initIndex=targetObject.parent.getChildIndex(targetObject);
-			this.isMoving=false;
+			this.initIndex = targetObject.parent.getChildIndex(targetObject);
+			this.isMoving = false;
 		}
 		
 	/**
@@ -99,7 +99,7 @@ package  {
    * @param activeZone your new active zone.
    */
 		public function setActiveZone(activeZone:MovieClip){
-			this.activeZone=activeZone;
+			this.activeZone = activeZone;
 		}
 		
 		protected function onMouseOutTarjectObject(e:MouseEvent):void{
@@ -130,14 +130,14 @@ package  {
 		}
 				
 		private function Tween2Action(elemento:MovieClip, property:String, startPosition:Number, endPosition:Number, duration:Number):void {
-			elemento=targetObject;
+			elemento = targetObject;
 			Tween2 = new Tween(elemento,property, Strong.easeOut, startPosition, endPosition, duration,true);
 			Tween2.addEventListener(TweenEvent.MOTION_FINISH, onTween2Finish);
 		}
 		
 		private function onTween2Finish(e:TweenEvent):void{
 			if(!stateObject){targetObject.addEventListener(MouseEvent.MOUSE_DOWN,onDownTarjectObject);}
-			activeZone.alpha=0;
+			activeZone.alpha = 0;
 			this.targetObject.parent.setChildIndex(this.targetObject,this.initIndex);
 		}
 		
@@ -152,10 +152,10 @@ package  {
 			targetObject.removeEventListener(MouseEvent.MOUSE_OUT,onMouseOutTarjectObject);
 		}
 	/**
-   * Enables the object when it's been located in the active zone and sets stateObject to true.
+   * Enables the object when it's been located in the active zone and sets stateObject to false.
    */
 		public function enable():void{
-			stateObject=false;
+			stateObject = false;
 			targetObject.addEventListener(MouseEvent.MOUSE_DOWN,onDownTarjectObject);
 		}
 	
@@ -166,39 +166,39 @@ package  {
    *@param newEndFrame new frame that is showed when the object is set in its new active zone.
    */	
 		public function stepTo(newActiveZone:MovieClip,newInitFrame:int,newEndFrame:int):void{
-			this.startPositionObjectX=this.activeZone.x;
-			this.startPositionObjectY=this.activeZone.y;
-			this.activeZone=newActiveZone;
-			this.initFrame=newInitFrame;
-			this.endFrame=newEndFrame;
+			this.startPositionObjectX = this.activeZone.x;
+			this.startPositionObjectY = this.activeZone.y;
+			this.activeZone = newActiveZone;
+			this.initFrame = newInitFrame;
+			this.endFrame = newEndFrame;
 			enable();
 		}
 	/**
    * Executes the standard mouse up function. Stops stopDrag function, sets StateObject to true and removes the mouse events if the hitTestObject between the object and the active zone is true; else a goStartPosition function is executed.
    */
 		protected function standardMouseUpFunction():void{
-			this.isMoving=false;
+			this.isMoving = false;
 			targetObject.removeEventListener(MouseEvent.MOUSE_UP,onUpTarjectObject);
 			targetObject.removeEventListener(MouseEvent.MOUSE_MOVE,onMoveTargetObject);
-			activeZone.alpha=0;
+			activeZone.alpha = 0;
 			targetObject.stopDrag();
 			if(targetObject.hitTestObject(activeZone)){
 				targetObject.gotoAndStop(endFrame);
-				targetObject.x=activeZone.x;
-				targetObject.y=activeZone.y;
+				targetObject.x = activeZone.x;
+				targetObject.y = activeZone.y;
 				removeAllMouseEvents();
-				this.stateObject=true;
+				this.stateObject = true;
 				dispatchEvent(new Event("fixed", true));
 				}
 			else{
 				goStartPosition();
-				this.stateObject=false;
+				this.stateObject = false;
 			}
 			if(mouseOut){targetObject.removeEventListener(MouseEvent.MOUSE_OUT,onMouseOutTarjectObject);}
 		}
 		
 		protected function standardMouseDownFunction():void{
-			this.isMoving=false;
+			this.isMoving = false;
 			targetObject.removeEventListener(MouseEvent.MOUSE_DOWN,onDownTarjectObject);
 			targetObject.startDrag();
 			targetObject.parent.setChildIndex(targetObject,targetObject.parent.numChildren-1);
@@ -208,11 +208,11 @@ package  {
 		}
 		
 		protected function standardMouseMoveFunction():void{
-			this.isMoving=true;
+			this.isMoving = true;
 			if(activeZone.hitTestObject(targetObject)){
-				activeZone.alpha=0.7;
+				activeZone.alpha = 0.7;
 			}
-			else if(activeZone.alpha<0.7&&activeZone.alpha>0.699){
+			else if(activeZone.alpha < 0.7 && activeZone.alpha > 0.699){
 					new Tween(activeZone,"alpha",None.easeOut,activeZone.alpha,0,0.5,true);
 			}
 		}
@@ -220,7 +220,7 @@ package  {
 		protected function standardMouseOutFunction():void{
 			targetObject.stopDrag();
 			goStartPosition();
-			this.isMoving=false;
+			this.isMoving = false;
 		}
 		
 	}
