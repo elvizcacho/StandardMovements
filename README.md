@@ -20,7 +20,7 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **StandardMovements**(targetObject,activeZone,initFrame,endFrame,mouseOut)
     - **targetObject:MovieClip** is the object in stage that you want to add basic moves to.
     - **activeZone:MovieClip** is the zone targetObject is going to be fixed to.
-    - **initFrame:int = 1** is an optional parameter corresponding to the starting keyframe of the object.
+    - **initFrame:int = 1** is an optional parameter corresponding to the initial keyframe of the object.
     - **endFrame:int = 2** is an optional parameter that controls the frame which is set when the object is fixed to the active zone.
     - **mouseOut:Boolean = false** If this parameter is set true, when the mouse goes out of the targetObject, this one returns to startPosition.
   
