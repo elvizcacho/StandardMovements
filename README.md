@@ -7,9 +7,9 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
 ### Class description
 
 * Class attributes 
-  - **startPositionObjectX:Number** : x starting position of the object.
-  - **startPositionObjectY:Number** : y starting position of the object.
-  - **initIndex:uint** : index starting value.
+  - **startPositionObjectX:Number** : initial x position of the object.
+  - **startPositionObjectY:Number** : initial y position of the object.
+  - **initIndex:uint** : initial index value of the object.
   - **isMoving:Boolean** : you read a *true* value if the object is being moved otherwise is *false*.
   
 
