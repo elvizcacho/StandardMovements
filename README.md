@@ -6,7 +6,7 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
 
 ### Class description
 
-* Class attributes 
+* Class public attributes 
   - **startPositionObjectX:Number** : initial x position of the object.
   - **startPositionObjectY:Number** : initial y position of the object.
   - **initIndex:uint** : initial index value of the object.
@@ -16,20 +16,27 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **endFrame:int** : the frame of the MovieClip when this one is fixed in the active zone.
   - **mouseOut:Boolean**: enable/disable the mouse out mode. If the moouse out mode is actived, when the mouse goes out to the object this return to its start position.
 
-* Class methods
-  - **StandardMovements**(targetObject, activeZone, initFrame, endFrame, mouseOut)
+* Class public methods
+  - **StandardMovements**(targetObject, activeZone, initFrame, endFrame, mouseOut):void
+    - *Contructor of the class.*
     - **targetObject:MovieClip** is the object in stage that you want to add basic moves to.
     - **activeZone:MovieClip** is the zone targetObject is going to be fixed to.
     - **initFrame:int = 1** is an optional parameter corresponding to the initial keyframe of the object.
     - **endFrame:int = 2** is an optional parameter that controls the frame which is set when the object is fixed to the active zone.
     - **mouseOut:Boolean = false** If this parameter is set true, when the mouse goes out of the targetObject, this one returns to startPosition.
 
-    
-  
+  - **getObj**():MovieClip
+    - *Gets the object you are adding moves and actions with this class.*
+
+  - **getActiveZone**():MovieClip
+    - *Gets the active zone where your object will remain.*
+
+  - **setActiveZone**(activeZone:MovieClip)
+    - *Sets the active zone where your object will remain.*
+    - **activeZone:MovieClip** your new active zone.
 
 * Class events
-  - Developement enviorement: sqlite3
-  - Production enviorement: postgres
+  
 
   ###### Sebastian Vizcaino
   elvizcacho@gmail.com
