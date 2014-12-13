@@ -6,7 +6,7 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
 
 ### Class description
 
-* Class public attributes 
+* Public attributes 
   - **startPositionObjectX:Number** : initial x position of the object.
   - **startPositionObjectY:Number** : initial y position of the object.
   - **initIndex:uint** : initial index value of the object.
@@ -16,7 +16,7 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **endFrame:int** : the frame of the MovieClip when this one is fixed in the active zone.
   - **mouseOut:Boolean**: enable/disable the mouse out mode. If the moouse out mode is actived, when the mouse goes out to the object this return to its start position.
 
-* Class public methods
+* Public methods
   - **StandardMovements**(targetObject, activeZone, initFrame, endFrame, mouseOut):void
     - *Contructor of the class.*
     - **targetObject:MovieClip** is the object in stage that you want to add basic moves to.
@@ -31,11 +31,21 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **getActiveZone**():MovieClip
     - *Gets the active zone where your object will remain.*
 
-  - **setActiveZone**(activeZone:MovieClip)
+  - **setActiveZone**(activeZone:MovieClip):void
     - *Sets the active zone where your object will remain.*
     - **activeZone:MovieClip** your new active zone.
 
-* Class events
+  - **goStartPosition**():void
+    - *Object goes to the start position.*
+
+  - **removeAllMouseEvents**():void
+    - *Removes all mouseEvents that this class generates*
+
+  - **enable()**:void
+    *Enables the object when this one has been located in the active zone and sets stateObject to false.*
+
+
+* Events
   
 
   ###### Sebastian Vizcaino

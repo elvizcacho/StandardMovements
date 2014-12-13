@@ -120,7 +120,6 @@ package  {
 	
 	/**
    * Object goes to the start position.
-   * @param activeZone your new active zone.
    */
 		public function goStartPosition():void{
 			targetObject.gotoAndStop(initFrame);
@@ -142,7 +141,7 @@ package  {
 		}
 		
 		/**
-   * Removes all mouseEvent-type events that this class generates
+   * Removes all mouseEvents that this class generates
    */
 		
 		public function removeAllMouseEvents():void{
