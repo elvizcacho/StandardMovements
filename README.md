@@ -17,12 +17,12 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **mouseOut:Boolean**: enable/disable the mouse out mode. If the moouse out mode is actived, when the mouse goes out to the object this return to its start position.
 
 * Class methods
-  - **StandardMovements(targetObject:MovieClip,activeZone:MovieClip,initFrame:int=1,endFrame:int=2,mouseOut:Boolean=false)**
-    - targetObject is the object in stage that you want to add basic moves to.
-    - activeZone is the zone targetObject is going to be fixed to.
-    - initFrame is an optional parameter corresponding to the starting keyframe of the object.
-    - endFrame is an optional parameter that controls the frame which is set when the object is fixed to the active zone.
-    - mouseOut If this parameter is set true, when the mouse goes out of the targetObject, this one returns to startPosition.
+  - **StandardMovements**(targetObject,activeZone,initFrame,endFrame,mouseOut)
+    - **targetObject:MovieClip** is the object in stage that you want to add basic moves to.
+    - **activeZone:MovieClip** is the zone targetObject is going to be fixed to.
+    - **initFrame:int = 1** is an optional parameter corresponding to the starting keyframe of the object.
+    - **endFrame:int = 2** is an optional parameter that controls the frame which is set when the object is fixed to the active zone.
+    - **mouseOut:Boolean = false** If this parameter is set true, when the mouse goes out of the targetObject, this one returns to startPosition.
   
 
 * Class events
