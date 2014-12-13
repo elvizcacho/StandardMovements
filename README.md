@@ -44,9 +44,16 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **enable()**:void
     *Enables the object when this one has been located in the active zone and sets stateObject to false.*
 
+  - **stepTo**(newActiveZone:MovieClip,newInitFrame:int,newEndFrame:int):void{
+    - *Changes the active zone for a new one and the current active zone becomes the new start position.*
+    - **newActiveZone:MovieClip** new active zone.
+    - **newInitFrame:int** new frame that is showed when the object is moving and remains in its new start position.
+    - **newEndFrame:int** new frame that is showed when the object is set in its new active zone.
+
 
 * Events
   
+  - **fixed** event is triggered when the object is fixed at the active zone.
 
   ###### Sebastian Vizcaino
   elvizcacho@gmail.com
