@@ -11,6 +11,13 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
   - **startPositionObjectY:Number** : initial y position of the object.
   - **initIndex:uint** : initial index value of the object.
   - **isMoving:Boolean** : you read a *true* value if the object is being moved otherwise is *false*.
+  - **stateObject:Boolean** : If this variable is true, the object remains in its active zone.
+  - **initFrame:int** : the frame of the MovieClip in the initial position.
+  - **endFrame:int** : the frame of the MovieClip when this one is fixed in the active zone.
+  - **mouseOut:Boolean**: enable/disable the mouse out mode. If the moouse out mode is actived, when the mouse goes out to the object this return to its start position.
+
+
+
   
 
 * Class methods
