@@ -2,7 +2,7 @@
 
 The StandardMovements class adds all the basic actions and movements to any object in the stage. It's the easiest and fastest way to add and use drag and drop actions in AS3. This class was used to develop more than 7 simulators of physics, chemistry and biology for an e-learning company.
 
-The class Standardmovements.as adds 'drag and drop' to objects which extends from this class. The constructor of the super class only needs a MovieClip that is the object that is going to adquire the 'drag and drop' and another one which takes the place of an active zone (where the object is going to end up fixed.)
+The class Standardmovements.as adds 'drag and drop' to objects which extend from this class. The constructor of the super class only needs a MovieClip that is the object that is going to adquire the 'drag and drop' and another one which takes the place of an active zone (where the object is going to end up fixed.)
 
 ### Class description
 
