@@ -7,10 +7,8 @@ The class Standardmovements.as adds 'drag and drop' to objects which extends fro
 ### Class description
 
 * Class attributes 
-  - startPositionObjectY:Number
-  Represents the y starting position of the object
-  - startPositionObjectX:Number
-  Represents the x starting position of the object
+  - **startPositionObjectX:Number** : Represents the x starting position of the object
+  - **startPositionObjectY:Number** : Represents the y starting position of the object
   
 
 * Class methods
