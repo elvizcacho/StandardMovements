@@ -1,4 +1,4 @@
-# DRAG AND DROP FOR ACTION SCRIPT 3.0
+# Drag and Drop for ActionScript 3.0
 
 
 This project consolidates the social media information of an artist. You add an artist then this application seeks for this one on the Last.fm API, if the artist exists, this one is added to the database and the listeners from Last.m, the popularity of Spootify, the "likes" of Facebook Fan Page and the "likes" only from Chile of this artist are shown in a table which is updated each hour. 
